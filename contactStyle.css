@@ -26,8 +26,14 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
     background-color: rgb(238, 238, 198);
     font-family: Arial, Helvetica, sans-serif;
+    height: 100dvh;
 }
 
 a.externo::after{
@@ -36,7 +42,8 @@ a.externo::after{
 
 header{
     background-image: linear-gradient(to bottom, var(--cor3),var(--cor5));
-    min-height: 150px;
+    height: fit-content;
+    width: 100%;
     text-align: center;
     padding-top: 30px;
 }
@@ -63,6 +70,7 @@ header>p {
 
 nav{
     background-color: var(--cor5);
+    margin-top: 10px;
     padding: 10px;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.568);
 }
@@ -82,11 +90,9 @@ nav>a:hover{
 
 main{
     background-color: white;
-    min-width: 280px;
-    max-width: 1000px;
-    margin: auto;
-    margin-bottom: 30px;
-    border-radius: 0px 0px 10px 10px;
+    height: 100%;
+    border-radius: 10px;
+    margin: 40px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.589);
 }
@@ -95,7 +101,7 @@ main h1{
     color: var(--cor5);
     font-family: var(--font-android);
     font-weight: normal;
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 main h2 {
@@ -143,47 +149,65 @@ main img.bugdroid-image{
     margin: auto;
 }
 
-div.video {
-    background-color: rgb(0, 0, 0);
-    margin: 0px -20px 30px -20px;
-    padding: 10px;
-    padding-bottom: 58%;
-    position: relative;
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    height: fit-content;
 }
 
-div.video>iframe{
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
 }
 
-aside{
-    background-color: var(--cor1);
-    padding: 10px;
-    margin: 20px 0px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.425);
+.fields{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    &>label{
+        flex: 1;
+        text-align: end;
+    }
+
+    &>input{
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid black;
+        outline: none;
+        font-family: var(--font-padrao);
+        font-size: 1.01rem;
+    }
+
+    &>input:focus {
+        background-color: #cce9e9;
+    }
 }
 
-aside h3{
-    background-color: var(--cor4);
-    color: white;
-    padding: 10px;
-    margin: -10px -10px 0px -10px;
-    border-radius: 10px 10px 0px 0px;
-    text-indent: 10px;
-}
+textarea{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    outline: none;
+    font-family: var(--font-padrao);
+    font-size: 1.01rem;
 
-aside ul{
-    list-style-type: '✓  ';
-    columns: 2;
+    &:focus{
+        background-color: #cce9e9;
+    }
 }
 
 footer{
     background-color: var(--cor5);
     color: white;
+    width: 98.3%;
     text-align: center;
     font-size: .8;
     padding: 5px;
