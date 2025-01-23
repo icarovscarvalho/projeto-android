@@ -24,29 +24,25 @@
   <main>
     <h1>Formulário de contato</h1>
     <div class="formContainer">
-      <form>
+      <form action="https://formsubmit.co/28480aa023c04a8f95d4a41e253d1379" method="POST">
         <div class="fields">
           <label for="name">Nome</label>
-          <input type="text" name="name" id="name" placeholder="Text here inside...">
-        </div>
-        <div class="fields">
-          <label for="lastname">Sobrenome</label>
-          <input type="text" name="lastname" id="lastname" placeholder="Text here inside...">
+          <input type="text" name="name" id="name"  required placeholder="Text here inside...">
         </div>
         <div class="fields">
           <label for="email">email</label>
-          <input type="email" name="email" id="email" placeholder="Text here inside...">
+          <input type="email" name="email" id="email"  required placeholder="Text here inside...">
         </div>
         <div id="messageContainer" class="fields">
+          <label for="message">Menssagem:</label>
           <textarea
-            name=""
-            id=""
+            name="message"
+            id="message"
             cols="35"
             rows="10"
             style="resize: none;"
-          >
-
-          </textarea>
+          ></textarea>
+          <button type="submit">Enviar</button>
         </div>
       </form>
     </div>
